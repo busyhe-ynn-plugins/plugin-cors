@@ -1,0 +1,51 @@
+{
+  "name": "@busyhe/ynn-plugin-cors",
+  "version": "0.0.1",
+  "description": "用于处理CORS请求授权的Ynn插件。",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --forceExit",
+    "tw": "npm run test-watch",
+    "test-watch": "jest --watch",
+    "test-cov": "jest --coverage --runInBand --forceExit --detectOpenHandles",
+    "lint": "eslint src --cache --ignore-path .eslintignore",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:busyhe-ynn-plugins/plugin-cors.git"
+  },
+  "keywords": [
+    "cors",
+    "access-control",
+    "request",
+    "cross-origin",
+    "cross-domain"
+  ],
+  "author": "LvChengbin <lvchengbin59@gmail.com>",
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.spec.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "text",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "jest": "^26.1.0",
+    "pre-commit": "^1.2.2",
+    "supertest": "^4.0.2",
+    "ynn": "0.1.1"
+  },
+  "dependencies": {
+    "@lvchengbin/is": "0.0.27",
+    "vary": "^1.1.2"
+  }
+}
